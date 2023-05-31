@@ -6,7 +6,7 @@
 #    By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/31 15:18:45 by irivero-          #+#    #+#              #
-#    Updated: 2023/05/31 15:31:21 by irivero-         ###   ########.fr        #
+#    Updated: 2023/05/31 15:42:41 by irivero-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ OBJ = $(SRC:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJ) ft_printf.h
-		@$(AR) $@ $^
+		@ar rc $(NAME) $(OBJ)
 
 .PHONY: all clean fclean re
 

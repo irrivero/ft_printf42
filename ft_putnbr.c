@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 14:26:19 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/31 14:41:21 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/31 15:52:10 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ void	ft_putnbr(int n, int *d)
 {
 	if (n == -2147483648)
 	{
-		write(1, "-2147483648", 11);
+		ft_putstr("-2147483648", d);
 		return ;
 	}
-	else if (n < 0)
+	if (n < 0)
 	{
-		n *= -1;
+		n = -n;
 		ft_putchar('-', d);
 	}
-	else if (n >= 10)
+	if (n >= 10)
 		ft_putnbr(n / 10, d);
 	ft_putchar(n % 10 + 48, d);
 }

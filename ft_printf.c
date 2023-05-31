@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 13:27:47 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/31 15:31:25 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/31 15:47:57 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_printsi(const char *tipo, va_list args, int *i, int *d)
 	else if (tipo[*i] == 'p')
 		ft_putpunt(va_arg(args, void *), d);
 	else if (tipo[*i] == 's')
-		ft_putstr(va_arg(args, char), d);
+		ft_putstr(va_arg(args, char *), d);
 	*i += 1;
 }
 
@@ -44,11 +44,11 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	n = ft_strlen(format);
 	d = 0;
-	while(format[i] && i < n)
+	while (format[i] && i < n)
 	{
 		if (format[i] != '%')
 			ft_putchar(format[i++], &d);
-		else if(i < n)
+		else if (i < n)
 		{
 			i++;
 			ft_printsi(format, args, &i, &d);

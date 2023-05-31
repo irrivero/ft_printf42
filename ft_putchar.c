@@ -6,13 +6,13 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 13:21:15 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/31 14:41:36 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/31 15:44:42 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c, int *d)
+void	ft_putchar(int c, int *d)
 {
-	d += write(1, &c, 1);
+	*d += write(1, &c, 1);
 }
