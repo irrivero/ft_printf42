@@ -1,7 +1,7 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-//cc -o test main.c -L. -lftprintf
+//cc -o test main.c -L. -libftprintf
 //valgrind ./test
 int main() {
     // Ejemplos de uso de ft_printf
