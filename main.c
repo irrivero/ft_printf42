@@ -1,6 +1,8 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
+//cc -o test main.c -L. -lftprintf
+//valgrind ./test
 int main() {
     // Ejemplos de uso de ft_printf
     ft_printf("Hello, world!\n");
