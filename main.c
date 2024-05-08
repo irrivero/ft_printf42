@@ -1,7 +1,7 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-//cc -o test main.c -L. -libftprintf
+//cc -o test main.c -L. libftprintf.a
 //valgrind ./test
 int main() {
     // Ejemplos de uso de ft_printf
@@ -30,12 +30,13 @@ int main() {
     printf("Unsigned decimal: %u\n", 123456);
     printf("Pointer address: %p\n", (void *)0x12345678);
     printf("Integer: %d\n", 2147483647);
-    printf("Integer: %d\n", -2147483648);
-    printf("Unsigned integer: %u\n", 4294967295);
+    printf("Integer: %ld\n", -2147483648);
+    printf("Unsigned integer: %ld\n", 4294967295);
     printf("Character: %c\n", '\0');
-    printf("String: %s\n", NULL);
+    printf("String: %p\n", NULL);
     printf("Hexadecimal: %x\n", 0);
     printf("Pointer address: %p\n", (void *)0);
 
     return 0;
 }
+
